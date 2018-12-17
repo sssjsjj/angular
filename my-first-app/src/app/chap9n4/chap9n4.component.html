@@ -1,7 +1,0 @@
-<h2>Chapter 9 - ex 4</h2>
-  <div *ngFor="let character of characters">
-    <div class="char" (click)="selectCharacter(character)">
-      {{character.name}}
-    </div>
-  </div>
-<app-chap9n4sub [character]="character" (CharacterDeleted)="deleteChar($event)"></app-chap9n4sub>

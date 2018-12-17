@@ -1,8 +1,0 @@
-/* You can add global styles to this file, and also import other style files */
-/* reset */
-body, html, div, p, *{margin: 0; padding: 0; vertical-align: top; color: #333}
-a{text-decoration: none;}
-li, dt, dd{list-style: none;}
-
-/* common */
-h2{margin-bottom: 2em;}
