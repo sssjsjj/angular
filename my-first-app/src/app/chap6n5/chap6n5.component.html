@@ -1,0 +1,25 @@
+<h2>Chapter 6 - ex 5</h2>
+<div (mousemove)="move($event)">
+  <img [src]="imageUrl" (mouseenter)="mouseGoesIn()" (mouseleave)="mouseLeft()" (dblclick)="changeImg()"  alt=""><br>
+  <p>
+    double click the picture to change it<br>
+    The Mouse has {{mouse}}
+  </p>
+  <button (click)="changeImg()">Change Picture</button><hr>
+  <input (keyup)="onKeyup($event)" (keydown)="onKeydown($event)" (keypress)="keypress($event)" (blur)="underTheScope($event)" (focus)="underTheScope($event)">
+  <input [value]="sameVal">
+  <input [value]="sameVal">
+  {{view}}
+  <p>On key up: {{upvalues}}</p>
+  <p>on key down: {{downValues}}</p>
+  <p>on key press: {{keypressValue}}</p>
+  <p (mousemove)="move($event)">
+    x coordinates: {{x}}
+    <br> y coordinates: {{y}}
+  </p>
+</div>
+
+<!-- 6-4 this 확인용 -->
+<div [style.color]="twoColors ? 'blue' : 'forestgreen'">
+    what color am I
+</div>

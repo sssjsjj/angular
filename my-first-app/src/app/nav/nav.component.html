@@ -1,0 +1,59 @@
+<div class="gnb">
+  <!-- <li *ngFor="let page of pages" class="nav-{{page.url}}">
+    <a routerLink="/{{page.url}}">
+      {{page.text}}
+    </a>
+  </li> -->
+  <app-tabs> 
+      <app-tab [tabTitle]="'Ch 5'" [tabUrl]="'chap5n1'"> 
+        <ul>
+          <li *ngFor="let sub5 of sub5s" class="nav-{{sub5.url}}">
+              <a routerLink="/{{sub5.url}}">{{sub5.text}}</a>
+          </li>
+        </ul>
+      </app-tab>
+      <app-tab tabTitle="Ch 6" tabUrl="chap6n1"> 
+          <ul>
+              <li *ngFor="let sub6 of sub6s" class="nav-{{sub6.url}}">
+                  <a routerLink="/{{sub6.url}}">{{sub6.text}}</a>
+              </li>
+            </ul>
+      </app-tab>
+      <app-tab tabTitle="Ch 7" tabUrl="chap7n1">  
+          <ul>
+              <li *ngFor="let sub7 of sub7s" class="nav-{{sub7.url}}">
+                  <a routerLink="/{{sub7.url}}">{{sub7.text}}</a>
+              </li>
+            </ul>
+      </app-tab>
+      <app-tab tabTitle="Ch 8" tabUrl="chap8n1">  
+          <ul>
+              <li *ngFor="let sub8 of sub8s" class="nav-{{sub8.url}}">
+                  <a routerLink="/{{sub8.url}}">{{sub8.text}}</a>
+              </li>
+            </ul>
+      </app-tab>
+      <app-tab tabTitle="Ch 9" tabUrl="chap9n1">  
+          <ul>
+              <li *ngFor="let sub9 of sub9s" class="nav-{{sub9.url}}">
+                  <a routerLink="/{{sub9url}}">{{sub9.text}}</a>
+              </li>
+            </ul>
+      </app-tab>
+      <app-tab tabTitle="Ch 10" tabUrl="chap10n1"> 
+          <ul>
+              <li *ngFor="let sub10 of sub10s" class="nav-{{sub10.url}}">
+                  <a routerLink="/{{sub10.url}}">{{sub10.text}}</a>
+              </li>
+            </ul>
+      </app-tab>
+      <app-tab tabTitle="Ch 11" tabUrl="chap11n2">  
+          <ul>
+              <li *ngFor="let sub11 of sub11s" class="nav-{{sub11.url}}">
+                  <a routerLink="/{{sub11.url}}">{{sub11.text}}</a>
+              </li>
+            </ul>
+      </app-tab>
+  </app-tabs>
+
+</div>

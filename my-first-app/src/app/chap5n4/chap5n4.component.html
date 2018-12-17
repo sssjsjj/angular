@@ -1,0 +1,48 @@
+<section>
+  <h1>Chapter 5 - ex 4</h1>
+  <ul>
+    <li>
+        uppercase: {{"Brendan" | uppercase}}<br>
+    </li>
+    <li>
+        lowercase: {{"HELLOW WORLD" | lowercase}}<br>
+    </li>
+    <li>
+      Date: {{ today | date: 'y MMMM EEEE hmsz'}}<br>
+    </li>
+    <li>
+      Date(mediumDate): {{today | date: 'mediumDate'}}<br>
+    </li>
+    <li>
+      Date(shortTime): {{today | date: 'shortTime'}}<br>
+    </li>
+    <li>
+      Number: {{3.1415927 | number: '2.1-5'}}<br>
+    </li>
+    <li>
+      Number: {{28 | number: '2.3'}}<br>
+    </li>
+    <li>
+      Currency: {{125.257 | currency: 'KRW':true: '1.2-2'}}<br>
+    </li>
+    <li>
+      Currency: {{2158.925 | currency}}<br>
+    </li>
+    <li>
+      Json: {{jsonObject | json}}<br>
+    </li>
+    <li>
+      PercentPipe: {{.8888 | percent: '2.2'}}<br>
+    </li>
+    <li>
+      SlicePipe: {{"hello world" | slice:0:8}}...<br>
+    </li>
+    <li>
+      SlicePipe: {{days | slice:1:6}}<br>
+    </li>
+    <li>
+      legen... {{wait | async}} {{dairy | async}}
+    </li>
+    
+  </ul>
+</section>

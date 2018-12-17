@@ -1,0 +1,3 @@
+span{color: red; border: 2px solid red;}
+app-nav {display: block; height: 80px; padding: 0 3%;border-bottom: 1px solid #ddd; line-height: 80px; box-sizing: border-box;}
+.container{padding: 60px calc(3% + 20px);}

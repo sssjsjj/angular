@@ -1,0 +1,4 @@
+.title{color:white; background-color: dimgrey; padding: 10px;}
+.container{text-align: center; margin: 0px;}
+.description{color: red; background-color: lightgrey; margin-top: -4px; padding: 10px}
+.sticky{display: inline-block; pad: 0; margin: 15px; border-left: 3px solid #333; border-right: 3px solid #333;}

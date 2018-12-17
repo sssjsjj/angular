@@ -1,0 +1,4 @@
+span{width: 75px; text-align: right; font-weight: bold; display: inline-block;}
+.userrCard{ display: inline-block; border: 2px ridge blue; margin: 10px 0; padding: 5px; cursor: pointer;}
+.userrCard:hover{background-color: lightblue;}
+.selected{background-color: steelblue; color: white;}

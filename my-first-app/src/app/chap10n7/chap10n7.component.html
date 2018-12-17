@@ -1,0 +1,17 @@
+<h2>Chapter 10 - ex 7</h2>
+<div>
+  <label for="">user name:</label> <input #userName>
+  <label for="">user email:</label> <input #userEmail>
+  <button (click)="createUser(userName.value, userEmail.value); userName.value=''; userEmail.value='';">
+    add
+  </button>
+</div>
+
+<h3>Users</h3>
+<div class="usercard" *ngFor="let user of users">
+  <div><span>Id:</span>{{user.id}}</div>
+  <div><span>Username:</span>{{user.userName}}</div>
+  <div><span>Email:</span>{{user.email}}</div>
+  <button class="delete" (click)="deleteUser(user); $event.stopPropagation()">X</button>
+
+</div>
