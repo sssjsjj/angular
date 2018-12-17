@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {UserService} from './user.service';
-import { observable } from 'rxjs';
+
 @Component({
   selector: 'app-chap10n12',
   templateUrl: './chap10n12.component.html',
