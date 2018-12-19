@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'study';
+  my_menu = {
+    'main1': ['sub1', 'sub2'],
+    'main2': ['sub1', 'sub2'],
+  }
 }

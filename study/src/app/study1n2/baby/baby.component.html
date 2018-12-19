@@ -1,0 +1,17 @@
+<div class="char-box">
+  <div *ngFor="let character of characters" class="char-list">
+    <dl class="character">
+    <dt>Name</dt>
+    <dd>{{character.name}}</dd>
+    <dt>Roll</dt>
+    <dd>{{character.role}}</dd>
+    <dt>Hobby</dt>
+    <dd>{{character.hobby}}</dd>
+    <dt>Age</dt>
+    <dd>{{character.age}}</dd>
+  </dl>
+  <div *ngIf="character.alignment == '애깅'">
+    <button (click)="youngerMagic(character, 1)">MAGIC!!</button>
+  </div> 
+</div>
+</div>

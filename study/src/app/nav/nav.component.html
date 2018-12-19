@@ -1,0 +1,18 @@
+<header>
+  <h1><a routerLink="">수 지 니 의 나 라</a></h1>
+  <ul class="gnb">
+    <li class="d1" *ngFor="let page of pages">
+        <a routerLink="/{{page.url}}">{{page.text}}</a>
+        <ul class="d2-box">
+            <li *ngFor="let subPage of page.subPages">
+              <a routerLink="/{{subPage.url}}">{{subPage.text}}</a>
+            </li>
+        </ul>
+    </li>
+  </ul>
+</header>
+
+<!-- <span class="container" *ngFor="let page of pages">
+  <a routerLink="/{{page.url}}">{{page.text}}</a>
+</span> -->
+

@@ -1,0 +1,2 @@
+.char-box:after{display: block; clear: both; content: '';}
+.char-list{float: left; padding: 20px; border: 1px solid #eee;}
