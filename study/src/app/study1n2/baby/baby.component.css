@@ -1,2 +1,7 @@
+.char-box{margin-bottom: 40px;}
 .char-box:after{display: block; clear: both; content: '';}
 .char-list{float: left; padding: 20px; border: 1px solid #eee;}
+.char-list + .char-list{margin-left: 20px;}
+dt{font-size: 12px; font-weight: normal; color: #999;}
+dd + dt{margin-top: 15px;}
+button{margin-top: 20px}

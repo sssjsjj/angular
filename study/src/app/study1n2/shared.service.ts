@@ -71,7 +71,7 @@ export class SharedService {
         if(this.characters[index].age <= 0){
           this.characters.splice(index, 1);
         }
-      }
+      } 
       this.observer.next(this.characters);
    }
 }
