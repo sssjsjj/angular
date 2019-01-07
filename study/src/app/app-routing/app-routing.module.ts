@@ -36,7 +36,7 @@ const routes: Routes = [
   {
     path: 'observable2',
     component: Observable2Component
-  },
+]
   {
     path: '',
     component: HomeComponent
