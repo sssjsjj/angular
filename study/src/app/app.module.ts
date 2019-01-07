@@ -14,6 +14,10 @@ import { ExObservableComponent } from './ex-observable/ex-observable.component';
 import { Study1n2Component } from './study1n2/study1n2.component';
 import { AdultComponent } from './study1n2/adult/adult.component';
 import { BabyComponent } from './study1n2/baby/baby.component';
+import { Observable1Component } from './observable1/observable1.component';
+import { Observable2Component } from './observable2/observable2.component';
+// import { InMemoryDataService } from './study1n2/data.service';
+// import {HttpModule} from '@angular/http';
 
 
 @NgModule({
@@ -27,6 +31,8 @@ import { BabyComponent } from './study1n2/baby/baby.component';
     Study1n2Component,
     AdultComponent,
     BabyComponent,
+    Observable1Component,
+    Observable2Component,
   ],
   imports: [
     BrowserModule,
@@ -35,6 +41,8 @@ import { BabyComponent } from './study1n2/baby/baby.component';
     BrowserAnimationsModule,
     MatButtonModule,
     MatMenuModule,
+    // HttpModule,
+    // InMemoryWebApiModule.forRoot(InMemoryDataService),
   ],
   providers: [],
   bootstrap: [AppComponent]

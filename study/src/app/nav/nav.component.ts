@@ -9,33 +9,29 @@ export class NavComponent implements OnInit {
   pages = [
     {
       'url': 'study1',
-      'text': 'study 1',
+      'text': 'http',
       'subPages': [
         {
-          'url': 'study1-1',
+          'url': 'study1',
           'text': 'study 1-1 '
         },
         {
-          'url': 'ex-observable',
-          'text': 'ex observable'
-        },
-        {
           'url': 'study1n2',
-          'text': 'study 1-2'
+          'text': '교재 예제'
         },
       ]
     },
     {
-      'url': 'study2',
-      'text': 'study 2',
+      'url': 'observable1',
+      'text': 'observable',
       'subPages': [
         {
-          'url': 'study2-1',
-          'text': 'study 2-1 '
+          'url': 'observable1',
+          'text': '교재 예제'
         },
         {
-          'url': 'study2-2',
-          'text': 'study 2-2'
+          'url': 'observable2',
+          'text': '타이머(과제)'
         },
       ]
     },

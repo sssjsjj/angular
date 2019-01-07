@@ -2,11 +2,15 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%;}
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; line-height: 1.5}
 li, dt, dd{list-style: none;}
 div, p, ul, li, h1, h2, h3, *{margin: 0; padding: 0; vertical-align: top;}
 a{text-decoration: none; color: #333;}
 
 /* Add application styles & imports to this file! */
 .container{padding: 90px 3% 60px;}
-
+h2{margin-bottom: 40px}
+input{border: 1px solid #aaa; padding: 0.45em 1em; color: #aaa; transition: 0.3s ease-out;}
+input:focus{border-color: #000; color:#000; outline: none;}
+button{padding: 0.4em 1em 0.5em; border:none; background-color: #f35; color: #fff; cursor: pointer; transition: 0.3s ease-out;}
+button:hover{box-shadow: 5px 5px 15px #999; transform: translateY(-3px);}
