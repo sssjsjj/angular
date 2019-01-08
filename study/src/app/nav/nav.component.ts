@@ -13,11 +13,11 @@ export class NavComponent implements OnInit {
       'subPages': [
         {
           'url': 'study1',
-          'text': 'study 1-1 '
+          'text': 'http 예제'
         },
         {
           'url': 'study1n2',
-          'text': '교재 예제'
+          'text': '공유 서비스 예제'
         },
       ]
     },

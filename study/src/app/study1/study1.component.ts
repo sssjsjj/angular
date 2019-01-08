@@ -1,25 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { PromiseService } from './promise.service';
-import { Observable } from 'rxjs';
-
 
 @Component({
   selector: 'app-study1',
   templateUrl: './study1.component.html',
-  styleUrls: ['./study1.component.css'],
-  providers: [PromiseService]
+  styleUrls: ['./study1.component.css']
 })
 export class Study1Component implements OnInit {
   seconds = 0;
   countNum = 0;
 
-  constructor(private alert: PromiseService) { }
+  constructor() { }
 
-  createAlert() {
-    this.showNum();
-    this.alert.createTimedAlert(this.seconds);
-    this.countNum = this.seconds;
-  }
 
   showNum() {
     const startCount = setInterval( () => {
