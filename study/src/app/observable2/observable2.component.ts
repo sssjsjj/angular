@@ -13,7 +13,7 @@ export class Observable2Component implements OnInit {
   constructor(private timer: TimerService) { 
   }
 
-  startAlert(){
+  startAlert() {
     this.timer$ = new Observable(observer => {
       this.countSec(observer);
     });
@@ -33,6 +33,12 @@ export class Observable2Component implements OnInit {
         }
       },1000);
   }
+
+keyCheck(event){
+    event.preventDefault();
+    this.startAlert();
+    console.log('요 키첵');
+}
 
   ngOnInit() {}
 

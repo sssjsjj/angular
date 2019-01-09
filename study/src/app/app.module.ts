@@ -18,6 +18,8 @@ import { Observable1Component } from './observable1/observable1.component';
 import { Observable2Component } from './observable2/observable2.component';
 // import { InMemoryDataService } from './study1/data.service';
 import { HttpClientModule } from '@angular/common/http';
+import { NumCheckDirective } from './observable2/num-check.directive';
+import { DirectiveComponent } from './directive/directive.component';
 
 
 @NgModule({
@@ -33,6 +35,8 @@ import { HttpClientModule } from '@angular/common/http';
     BabyComponent,
     Observable1Component,
     Observable2Component,
+    NumCheckDirective,
+    DirectiveComponent,
   ],
   imports: [
     BrowserModule,

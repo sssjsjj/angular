@@ -1,4 +1,12 @@
 p{font-size: 50px; font-weight: bold; color: #f35;}
 input{border: 1px solid #aaa; padding: 0.45em 1em; color: #aaa; transition: 0.3s ease-out;}
 input:focus{border-color: #000; color:#000; outline: none;}
-button{margin-left: 10px;} 
+
+/*input number style delete*/
+/* input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+} */
+
+button{margin-left: 10px;}
