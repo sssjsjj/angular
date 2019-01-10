@@ -15,34 +15,31 @@ export class Character {
 @Injectable()
 export class SharedService {
   url = 'api/characters';
-  characters = [];
+  characters: Character[];
+  charObservable$: Observable<Character[]>;
 
 // 옵저버블 타입의 charobservable을 생성하는 메서드 정의.
 // 옵저버 객체는 observer 서비스 변수에 저장. 그 후 characters 배열을 내보냄.
-  charObservable: Observable<Character[]> ;
   observer;
-  constructor(public http: Http) {
-    this.charObservable = new Observable(observer => {
-      this.observer = observer;
-      // this.observer.next(this.characters);
-      this.http
-      .get( this.url ).pipe( map( res => res.json() ) );
-    })
-   }
+  // constructor(public http: Http) {
+  //   this.charObservable = new Observable(observer => {
+  //     this.observer = observer;
+  //     this.observer.next(this.characters);
+  //   })
+  //  }
+
+  //  getCharacters(): Observable<Character[]>{
+  //    return this.charObservable;
+  //  }
+
+   constructor(public http: Http) {}
 
    getCharacters(): Observable<Character[]>{
-     return this.charObservable;
-    //  return this.http
-    //   .get( this.url ).pipe( map( res => res.json() ) );
+     return this.http.get( this.url ).pipe( map( res => res.json() ) );
    }
-  // getCharacters(): Promise<any[]> {
-  //   return this.http.get(this.url).toPromise()
-  //   .then(response => response.json())
-  //   .catch(this.handleError);
-  // }
 
    youngerMagic(character, younger) {
-
+    console.log( this.characters[index] );
      const index = this.characters.indexOf(character, 0);
       if (index > -1) {
         this.characters[index].age -= younger;
@@ -50,7 +47,9 @@ export class SharedService {
           this.characters.splice(index, 1);
         }
       }
-      this.observer.next(this.characters);
+      
+
+      // this.observer.next(this.characters);
    }
 
    handleError(error): Promise<any> {

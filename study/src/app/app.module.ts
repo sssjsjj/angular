@@ -14,7 +14,6 @@ import { BabyComponent } from './study1n2/baby/baby.component';
 import { Observable1Component } from './observable1/observable1.component';
 import { Observable2Component } from './observable2/observable2.component';
 import { InMemoryDataService } from './study1/data.service';
-import { CharacterMemory } from './study1n2/data.service';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { HttpModule } from '@angular/http';
 import { NumCheckDirective } from './observable2/num-check.directive';
@@ -43,7 +42,6 @@ import { DirectiveComponent } from './directive/directive.component';
     AppRoutingModule,
     HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService),
-    InMemoryWebApiModule.forRoot(CharacterMemory),
   ],
   providers: [],
   bootstrap: [AppComponent]

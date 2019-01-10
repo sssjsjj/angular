@@ -21,9 +21,18 @@ export class AdultComponent implements OnInit {
 //    this.shared.getCharacters()
 //    .then(characters => this.characters = characters);
 //  }
+youngerMagic(character, younger) {
 
-  youngerMagic(character, younger){
-    this.shared.youngerMagic(character, younger);
-  }
+  const index = this.characters.indexOf(character, 0);
+   if (index > -1) {
+     this.characters[index].age -= younger;
+     if (this.characters[index].age <= 0) {
+       this.characters.splice(index, 1);
+     }
+   }
+}
+  // youngerMagic(character, younger){
+  //   this.shared.youngerMagic(character, younger);
+  // }
 
 }
