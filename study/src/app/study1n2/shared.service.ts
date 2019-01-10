@@ -15,42 +15,36 @@ export class Character {
 @Injectable()
 export class SharedService {
   url = 'api/characters';
-  characters: Character[];
+  // characters: Character[];
   charObservable$: Observable<Character[]>;
-
-// 옵저버블 타입의 charobservable을 생성하는 메서드 정의.
-// 옵저버 객체는 observer 서비스 변수에 저장. 그 후 characters 배열을 내보냄.
-  observer;
-  // constructor(public http: Http) {
-  //   this.charObservable = new Observable(observer => {
-  //     this.observer = observer;
-  //     this.observer.next(this.characters);
-  //   })
-  //  }
-
-  //  getCharacters(): Observable<Character[]>{
-  //    return this.charObservable;
-  //  }
 
    constructor(public http: Http) {}
 
-   getCharacters(): Observable<Character[]>{
+   getCharacters(): Observable<any[]> {
      return this.http.get( this.url ).pipe( map( res => res.json() ) );
    }
 
    youngerMagic(character, younger) {
-    console.log( this.characters[index] );
-     const index = this.characters.indexOf(character, 0);
-      if (index > -1) {
-        this.characters[index].age -= younger;
-        if (this.characters[index].age <= 0) {
-          this.characters.splice(index, 1);
+    console.log( character );
+        character.age -= younger;
+        if (character.age <= 0) {
+          character.splice(character.indexOf, 1);
         }
-      }
-      
-
-      // this.observer.next(this.characters);
+        const url = '${this.url}/${character.id}';
+        return this.http.put(url, JSON.stringify(character));
    }
+
+  //  기존 소스
+  //  youngerMagic(character, younger) {    
+  //   const index = this.characters.indexOf(character, 0);
+  //    if (index > -1) {
+  //      this.characters[index].age -= younger;
+  //      if (this.characters[index].age <= 0) {
+  //        this.characters.splice(index, 1);
+  //      }
+  //    }
+  //    this.observer.next(this.characters);
+  // }
 
    handleError(error): Promise<any> {
     console.error('An error occured', error);
