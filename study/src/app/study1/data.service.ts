@@ -6,7 +6,7 @@ export class InMemoryDataService implements InMemoryDbService{
      {
         'id': 1,
         'userName': 'brendan',
-        'emal': 'fake@email.com'
+        'email': 'fake@email.com'
       },
       {
         'id': 2,
@@ -18,7 +18,7 @@ export class InMemoryDataService implements InMemoryDbService{
         'userName': 'caleb',
         'email': 'dummy@email.com'
       }
-    ]
+    ];
     return {users};
   }
 }

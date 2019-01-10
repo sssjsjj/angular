@@ -1,28 +1,34 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from './user.service';
 
-@Component({
+@Component({ 
   selector: 'app-study1',
   templateUrl: './study1.component.html',
-  styleUrls: ['./study1.component.css']
+  styleUrls: ['./study1.component.css'],
+  providers: [UserService]
 })
 export class Study1Component implements OnInit {
-  seconds = 0;
-  countNum = 0;
+users = [];
+selectedUser;
 
-  constructor() { }
+  constructor(private UserService: UserService) { }
 
-
-  showNum() {
-    const startCount = setInterval( () => {
-      // console.log(this.countNum);
-      this.countNum -= 1;
-      if (this.countNum === 0) {
-        clearInterval(startCount);
-      }
-    }, 1000);
+  ngOnInit() {
+    this.getUsers();
   }
 
-  ngOnInit() {}
+  getUsers(): void {
+    this.UserService.getUsers()
+    .then(users => this.users = users);
+  }
 
+  selectUser(user) {
+    this.selectedUser = user;
+  }
 
+  updateUser(user) {
+    this.selectedUser = null;
+    this.UserService.updateUser(user)
+    .then(() => this.getUsers());
+  }
 }

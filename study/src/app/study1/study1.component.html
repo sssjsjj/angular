@@ -1,4 +1,18 @@
-<h3>set the time in seconds to create an alert</h3>
-<input type="number" [(ngModel)]="seconds">
-<button (click)="createAlert()">go</button>
-<p>{{countNum}}</p>
+<ul>
+    <li *ngFor="let user of users" (click)="selectUser(user)">
+        id: {{user.id}}<br>
+        name: {{user.userName}}<br>
+        email: {{user.email}}
+    </li>
+</ul>
+
+<div *ngIf="selectedUser">
+    <label for="">user name:</label>
+    <input #updateName type="text" [(ngModel)]="selectedUser.userName">
+    <label for="">user email:</label>
+    <input #updateEmail type="text" [(ngModel)]="selectedUser.email">
+</div>
+
+<button (click)="updateUser({
+    'id': selectedUser.id, 'userName': updateName.value, 'email': updateEmail.value
+})">유저 업데이트</button>
