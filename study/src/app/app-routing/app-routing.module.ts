@@ -6,6 +6,7 @@ import { ExObservableComponent } from '../ex-observable/ex-observable.component'
 import { Study1n2Component } from '../study1n2/study1n2.component';
 import { Observable1Component } from '../observable1/observable1.component';
 import { Observable2Component } from '../observable2/observable2.component';
+import { Observable3Component } from '../observable3/observable3.component';
 
 const routes: Routes = [
   {
@@ -32,6 +33,10 @@ const routes: Routes = [
   {
     path: 'observable2',
     component: Observable2Component
+  },
+  {
+    path: 'observable3',
+    component: Observable3Component
   },
   {
     path: '',

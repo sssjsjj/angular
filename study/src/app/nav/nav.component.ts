@@ -17,7 +17,7 @@ export class NavComponent implements OnInit {
         },
         {
           'url': 'study1n2',
-          'text': '공유 서비스 예제'
+          'text': '공유 서비스(과제)'
         },
       ]
     },
@@ -33,6 +33,10 @@ export class NavComponent implements OnInit {
           'url': 'observable2',
           'text': '타이머(과제)'
         },
+        {
+          'url': 'observable3',
+          'text': '별평점 예제'
+        }
       ]
     },
     {
@@ -52,16 +56,6 @@ export class NavComponent implements OnInit {
     {
       'url': 'study4',
       'text': 'study 4',
-      'subPages': [
-        {
-          'url': 'study4-1',
-          'text': 'study 4-1 '
-        },
-        {
-          'url': 'study4-2',
-          'text': 'study 4-2'
-        },
-      ]
     },
   ];
   constructor() { }

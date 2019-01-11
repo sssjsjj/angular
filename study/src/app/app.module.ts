@@ -18,6 +18,7 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { HttpModule } from '@angular/http';
 import { NumCheckDirective } from './observable2/num-check.directive';
 import { DirectiveComponent } from './directive/directive.component';
+import { Observable3Component } from './observable3/observable3.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { DirectiveComponent } from './directive/directive.component';
     Observable1Component,
     Observable2Component,
     NumCheckDirective,
-    DirectiveComponent
+    DirectiveComponent,
+    Observable3Component
   ],
   imports: [
     BrowserModule,

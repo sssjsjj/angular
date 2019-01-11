@@ -3,7 +3,7 @@
   <ul class="gnb">
     <li class="d1" *ngFor="let page of pages">
         <a routerLink="/{{page.url}}">{{page.text}}</a>
-        <ul class="d2-box">
+        <ul class="d2-box" *ngIf="page.subPages">
             <li *ngFor="let subPage of page.subPages">
               <a routerLink="/{{subPage.url}}">{{subPage.text}}</a>
             </li>
